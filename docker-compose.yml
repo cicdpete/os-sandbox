@@ -1,0 +1,19 @@
+services:
+  deb-sandbox:
+    container_name: deb-sandbox
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: deb-sandbox
+  py-sandbox:
+    container_name: py-sandbox
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: py-sandbox
+  py-script-sandbox:
+      container_name: py-script-sandbox
+      build:
+        context: .
+        dockerfile: py-sandbox/Dockerfile
+        target: py-script-sandbox
